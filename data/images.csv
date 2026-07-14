@@ -1,1 +1,10 @@
-
+image_id,file_name,width,height,equipment_type,location,status
+IMG-001,pump_001.jpg,1280,720,Pump,Process Plant,Normal
+IMG-002,motor_001.jpg,1280,720,Motor,Machine Shop,Normal
+IMG-003,valve_001.jpg,1280,720,Valve,Pipeline,Normal
+IMG-004,bearing_001.jpg,1280,720,Bearing,Maintenance Workshop,Worn
+IMG-005,gearbox_001.jpg,1280,720,Gearbox,Assembly Line,Normal
+IMG-006,compressor_001.jpg,1280,720,Compressor,Utility Area,Normal
+IMG-007,pipeline_001.jpg,1280,720,Pipeline,Plant Area,Corroded
+IMG-008,control_panel_001.jpg,1280,720,Control Panel,Electrical Room,Normal
+IMG-009,leakage_001.jpg,1280,720,Pipeline,Process Plant,Leakage
