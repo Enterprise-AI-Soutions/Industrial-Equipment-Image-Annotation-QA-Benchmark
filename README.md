@@ -1,5 +1,4 @@
 # Industrial-Equipment-Image-Annotation-QA-Benchmark
-Tech Stack- Python 3.12, Pandas, Pydantic, Pytest, JSON, CSV, pathlib
 
 Project Overview
 
@@ -24,6 +23,8 @@ Testing
 Results
 
 Future Work
+
+Tech Stack- Python 3.12, Pandas, Pydantic, Pytest, JSON, CSV, pathlib
 
 Pipeline execution
 Validate
