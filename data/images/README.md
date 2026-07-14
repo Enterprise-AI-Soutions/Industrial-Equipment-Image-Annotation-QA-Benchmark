@@ -4,8 +4,12 @@ For copyright reasons, sample images are not included in this public repository.
 
 You can use your own images following the naming convention below:
 
-pump_001.jpg
-motor_001.jpg
-valve_001.jpg
-bearing_001.jpg
-compressor_001.jpg
+- pump_001.jpg
+- motor_001.jpg
+- valve_001.jpg
+- bearing_001.jpg
+- compressor_001.jpg
+- gearbox_001.jpg
+- pipeline_001.jpg
+- heat-exchanger_001.jpg
+- electrical-panel_001.jpg
