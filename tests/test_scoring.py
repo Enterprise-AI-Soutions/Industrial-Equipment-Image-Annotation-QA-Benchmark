@@ -1,23 +1,52 @@
+from src.schemas import Annotation
+from src.schemas import BoundingBox
+
 from src.quality_scoring import calculate_quality_score
 
 
-def test_perfect_score():
+def build_annotation():
 
-    score = calculate_quality_score(
-        iou=1.0,
-        duplicate=False,
-        valid_schema=True
+    return Annotation(
+
+        image_id="IMG001",
+
+        annotation_id="ANN001",
+
+        label="pump",
+
+        confidence=0.90,
+
+        bbox=BoundingBox(
+
+            x=10,
+
+            y=10,
+
+            width=100,
+
+            height=100,
+
+        )
+
     )
 
-    assert score == 100
 
+def test_quality_score():
 
-def test_duplicate_penalty():
+    prediction = build_annotation()
 
-    score = calculate_quality_score(
-        iou=0.95,
-        duplicate=True,
-        valid_schema=True
+    ground_truth = build_annotation()
+
+    result = calculate_quality_score(
+
+        prediction,
+
+        ground_truth,
+
     )
 
-    assert score < 100
+    assert result["status"] == "PASS"
+
+    assert result["iou"] == 1.0
+
+    assert result["quality_score"] > 0.9
