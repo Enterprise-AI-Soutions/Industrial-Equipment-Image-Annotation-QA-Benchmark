@@ -134,7 +134,7 @@ py -3.12 -m venv .venv
 
 .venv\Scripts\activate
 
-output screenshots
+# Output Screenshots
 
 docs/images/
 
