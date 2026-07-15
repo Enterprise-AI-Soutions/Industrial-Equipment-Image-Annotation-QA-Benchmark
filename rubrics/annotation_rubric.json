@@ -1,1 +1,5 @@
-
+{
+  "passing_iou": 0.75,
+  "duplicate_penalty": 20,
+  "invalid_schema_penalty": 50
+}
