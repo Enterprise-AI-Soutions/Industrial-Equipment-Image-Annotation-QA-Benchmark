@@ -26,36 +26,55 @@ The project is intentionally lightweight while showcasing practical annotation Q
 # Repository Structure
 
 Industrial-Equipment-Image-Annotation-QA-Benchmark/
+
 data/
+
 images.csv
+
 annotator_1.jsonl
+
 annotator_2.jsonl
+
 images/
 
 reports/
 
 rubrics/
+
 annotation_rubric.json
 
 scripts/
+
 run_pipeline.ps1
 
 src/
+
 validate_annotations.py
+
 calculate_iou.py
+
 duplicate_detection.py
+
 agreement_analysis.py
+
 quality_scoring.py
+
 create_review_queue.py
+
 generate_report.py
+
 schemas.py
+
 config.py
 
 tests/
 
 README.md
+
 LICENSE
+
 LICENSE_IMAGES.md
+
 requirements.txt
 
 ---
