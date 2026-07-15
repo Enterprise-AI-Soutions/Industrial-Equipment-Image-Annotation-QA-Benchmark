@@ -3,7 +3,7 @@
 The following images were downloaded from publicly accessible websites for educational and portfolio demonstration purposes.
 
 | Image | Equipment | Source | License Status | Included in Public Repo |
-|--------|--------|----------------|--------------------------|
+|--------|--------|----------|----------------|--------------------------|
 | air_compressor_001.jpg | Air Compressor | pngtree | protected by copyright | No |
 | pump_001.jpg | Pump | iStockphoto | protected by copyright | No |
 | valve_001.jpg | Valve | magnific | protected by copyright | No |
