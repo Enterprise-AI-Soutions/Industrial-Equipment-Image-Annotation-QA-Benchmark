@@ -1,15 +1,34 @@
-This project uses a small sample dataset of industrial equipment images.
+# Industrial Equipment Image Dataset
 
-For copyright reasons, sample images are not included in this public repository.
+This repository contains a small demonstration dataset used for image annotation quality assurance.
 
-You can use your own images following the naming convention below:
+## Purpose
 
-- pump_001.jpg
-- motor_001.jpg
-- valve_001.jpg
-- bearing_001.jpg
-- compressor_001.jpg
-- gearbox_001.jpg
-- pipeline_001.jpg
-- heat-exchanger_001.jpg
-- electrical-panel_001.jpg
+The images are used to demonstrate:
+
+- Bounding box validation
+- Image annotation QA
+- Human annotator agreement
+- IoU (Intersection over Union)
+- Review queue generation
+- Annotation quality scoring
+
+## Equipment Categories
+
+- Air Compressor
+- Pump
+- Valve
+- Electric Motor
+- Bearing
+- Gearbox
+- Pipiline
+- Heat Exchanger
+- Electrical Panel
+
+## Notes
+
+- This dataset is intended solely for portfolio and educational purposes.
+- Images remain the property of their respective copyright holders.
+- No commercial redistribution is intended.
+
+See `LICENSE_IMAGES.md` for image sources and licensing information.
