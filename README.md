@@ -35,9 +35,23 @@ annotator_1.jsonl
 
 annotator_2.jsonl
 
-images/
+dataimages/
+
+LICENSE_IMAGES.md
+
+README.md
 
 reports/
+
+agreement_summary.json
+
+annotation_report.md
+
+annotation_summary.csv
+
+duplicate_boxes.csv
+
+review_queue.csv
 
 rubrics/
 
@@ -46,6 +60,8 @@ annotation_rubric.json
 scripts/
 
 run_pipeline.ps1
+
+run_pipeline.sh
 
 src/
 
@@ -65,15 +81,25 @@ generate_report.py
 
 schemas.py
 
-config.py
+_init_.py
 
 tests/
 
-README.md
+test_iou.py
+
+test_scoring.py
+
+test_validation.py
+
+_init_.py
+
+.gitignore
 
 LICENSE
 
-LICENSE_IMAGES.md
+README.md
+
+pyproject.toml
 
 requirements.txt
 
