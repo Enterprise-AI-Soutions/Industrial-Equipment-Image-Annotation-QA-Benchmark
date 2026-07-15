@@ -1,5 +1,8 @@
 {
-  "passing_iou": 0.75,
-  "duplicate_penalty": 20,
-  "invalid_schema_penalty": 50
+    "iou_pass_threshold": 0.80,
+    "quality_pass_score": 0.80,
+    "confidence_threshold": 0.70,
+    "label_weight": 0.30,
+    "iou_weight": 0.60,
+    "confidence_weight": 0.10
 }
