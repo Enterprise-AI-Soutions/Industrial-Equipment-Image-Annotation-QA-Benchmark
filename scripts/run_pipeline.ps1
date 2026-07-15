@@ -56,11 +56,13 @@ reports/review_queue.csv
 
 }
 
-Run-Step "Step 4 - Unit Tests" {
+Run-Step "Step 4 - Generate Report" {
 
-python -m pytest -q
+python -m src.generate_report
 
 }
+
+Step 5 - Unit Tests
 
 Write-Host ""
 Write-Host "==============================================="
