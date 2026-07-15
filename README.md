@@ -120,3 +120,15 @@ Create virtual environment
 py -3.12 -m venv .venv
 
 .venv\Scripts\activate
+
+output screenshots
+
+docs/images/
+
+pipeline_execution.png
+
+agreement_summary.png
+
+review_queue.png
+
+report_generation.png
