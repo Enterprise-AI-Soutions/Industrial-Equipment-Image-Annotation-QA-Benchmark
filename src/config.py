@@ -1,11 +1,55 @@
+"""
+Global configuration for the benchmark.
+"""
+
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+# -------------------------------------------------------
+# Root directories
+# -------------------------------------------------------
 
-DATA_DIR = ROOT / "data"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-REPORT_DIR = ROOT / "reports"
-
+DATA_DIR = PROJECT_ROOT / "data"
 IMAGE_DIR = DATA_DIR / "images"
+ANNOTATION_DIR = DATA_DIR / "annotations"
 
-RUBRIC = ROOT / "rubrics" / "annotation_rubric.json"
+REPORT_DIR = PROJECT_ROOT / "reports"
+
+# -------------------------------------------------------
+# Thresholds
+# -------------------------------------------------------
+
+IOU_THRESHOLD = 0.50
+
+QUALITY_PASS_SCORE = 0.80
+
+REVIEW_QUEUE_THRESHOLD = 0.70
+
+# -------------------------------------------------------
+# Supported classes
+# -------------------------------------------------------
+
+VALID_CLASSES = {
+
+    "pump",
+    "motor",
+    "valve",
+    "bearing",
+    "compressor",
+    "gearbox",
+    "generator",
+    "turbine",
+    "conveyor"
+
+}
+
+# -------------------------------------------------------
+# Default report names
+# -------------------------------------------------------
+
+ANNOTATION_REPORT = REPORT_DIR / "annotation_report.md"
+
+REVIEW_QUEUE = REPORT_DIR / "review_queue.csv"
+
+AGREEMENT_REPORT = REPORT_DIR / "agreement_summary.csv"
