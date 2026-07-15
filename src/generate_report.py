@@ -46,7 +46,9 @@ Generated automatically.
 
 
 if __name__ == "__main__":
-
-    print(
-        "Import generate_report() from pipeline."
+    generate_report(
+        validation_file="reports/validation_report.json",
+        agreement_file="reports/agreement_summary.json",
+        review_file="reports/review_queue.csv",
+        output_file="reports/annotation_report.md"
     )
