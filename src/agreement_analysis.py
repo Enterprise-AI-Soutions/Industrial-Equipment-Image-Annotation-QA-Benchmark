@@ -39,11 +39,11 @@ def calculate_agreement(file1, file2):
 if __name__ == "__main__":
 
     import argparse
+    from pathlib import Path
 
     parser = argparse.ArgumentParser()
 
     parser.add_argument("evaluator1")
-
     parser.add_argument("evaluator2")
 
     args = parser.parse_args()
@@ -53,21 +53,14 @@ if __name__ == "__main__":
         args.evaluator2,
     )
 
-    with open(
-    "reports/agreement_summary.json",
-    "w",
-    encoding="utf-8"
-) as f:
-    json.dump(result, f, indent=4)
+    Path("reports").mkdir(exist_ok=True)
 
-from pathlib import Path
+    output = "reports/agreement_summary.json"
 
-Path("reports").mkdir(exist_ok=True)
+    with open(output, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=4)
 
-output = "reports/agreement_summary.json"
+    print("Agreement summary written.")
+    print(output)
 
-with open(output, "w", encoding="utf-8") as f:
-    json.dump(result, f, indent=4)
-
-print("Agreement summary written.")
-print(output)
+    print(result)
