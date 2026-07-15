@@ -155,7 +155,7 @@ Image documentation:
 - `data/images/LICENSE_IMAGES.md`
 
 
-## Local Installation
+## Local Execution
 
 Create virtual environment
 
