@@ -111,6 +111,19 @@ requirements.txt
 - Pytest
 
 ---
+## Dataset
+
+The benchmark includes a small industrial equipment image dataset located in:
+
+```
+data/images/
+```
+
+Image sources and licensing information are available in:
+
+- `data/images/README.md`
+- `data/images/LICENSE_IMAGES.md`
+
 
 ## Local Installation
 
