@@ -26,14 +26,11 @@ The project is intentionally lightweight while showcasing practical annotation Q
 # Repository Structure
 
 Industrial-Equipment-Image-Annotation-QA-Benchmark/
-requirements.txt
 data/
 images.csv
 annotator_1.jsonl
 annotator_2.jsonl
-data/images/
-LICENSE_IMAGES.md
-README.md
+images/
 
 reports/
 
@@ -56,7 +53,10 @@ config.py
 
 tests/
 
-
+README.md
+LICENSE
+LICENSE_IMAGES.md
+requirements.txt
 
 ---
 
