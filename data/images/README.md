@@ -25,6 +25,36 @@ The images are used to demonstrate:
 - Heat Exchanger
 - Electrical Panel
 
+- ## Adding Your Own Images
+
+Replace the sample filenames with your own industrial equipment photographs.
+
+Recommended image resolution:
+
+- 1024×768
+- 1280×720
+- 1920×1080
+
+Recommended classes:
+
+- Air Compressor
+- Pump
+- Valve
+- Electric Motor
+- Bearing
+- Gearbox
+- Pipiline
+- Heat Exchanger
+- Electrical Panel
+
+After adding images, update:
+
+```
+data/images.csv
+```
+
+with the corresponding filenames.
+
 ## Notes
 
 - This dataset is intended solely for portfolio and educational purposes.
