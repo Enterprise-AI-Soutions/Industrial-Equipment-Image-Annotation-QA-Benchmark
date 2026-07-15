@@ -1,10 +1,10 @@
 image_id,file_name,equipment_type,source,width,height
-IMG001,compressor_01.jpg,Air Compressor,ELGi,1280,720
-IMG002,pump_01.jpg,Industrial Pump,Adobe Stock,1024,768
-IMG003,valve_01.jpg,Valve,iStock,1200,800
-IMG004,motor_01.jpg,Electric Motor,Vecteezy,1280,720
-IMG005,bearing_01.jpg,Bearing,Magnific,900,900
-IMG006,gearbox_01.jpg,Gearbox,Adobe Stock,1100,700
-IMG007,turbine_01.jpg,Turbine,iStock,1280,720
-IMG008,generator_01.jpg,Generator,Vecteezy,1280,720
-IMG009,conveyor_01.jpg,Conveyor,ELGi,1280,720
+IMG001,air_compressor.jpg,air_compressor,1280,720
+IMG002,pump.jpg,pump,1024,768
+IMG003,valve.jpg,valve,1200,800
+IMG004,motor.jpg,motor,1280,720
+IMG005,bearing.jpg,bearing,900,900
+IMG006,gearbox.jpg,gearbox,1100,700
+IMG007,pipeline.jpg,pipeline,1280,720
+IMG008,heat_exchanger.jpg,heat_exchanger,1280,720
+IMG009,electrical_panel.jpg,electrical_panel,1280,720
