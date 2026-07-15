@@ -1,1 +1,16 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "industrial-image-annotation-qa-benchmark"
+version = "1.0.0"
+description = "Industrial Equipment Image Annotation QA Benchmark"
+authors = [
+  {name = "Your Name"}
+]
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
