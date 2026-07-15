@@ -1,23 +1,68 @@
+$ErrorActionPreference = "Stop"
+
+function Run-Step {
+
+    param(
+
+        [string]$Title,
+
+        [scriptblock]$Command
+
+    )
+
+    Write-Host ""
+    Write-Host "==============================================="
+    Write-Host $Title
+    Write-Host "==============================================="
+    Write-Host ""
+
+    & $Command
+
+    if ($LASTEXITCODE -ne 0){
+
+        Write-Error "Pipeline failed."
+
+        exit $LASTEXITCODE
+
+    }
+
+}
+
 Write-Host ""
 Write-Host "Industrial Equipment Image Annotation QA Benchmark"
-Write-Host "================================================="
 Write-Host ""
 
-python -m src.validate_annotations
+Run-Step "Step 1 - Validate Annotation File" {
 
-python -m src.duplicate_detection
+python -m src.validate_annotations `
+data/annotations/annotator_1.json
 
-python -m src.agreement_analysis
+}
 
-python -m src.quality_scoring
+Run-Step "Step 2 - Reviewer Agreement" {
 
-python -m src.create_review_queue
+python -m src.agreement_analysis `
+data/annotations/annotator_1.json `
+data/annotations/annotator_2.json
 
-python -m src.generate_report
+}
 
-Write-Host ""
-Write-Host "Running Tests..."
+Run-Step "Step 3 - Review Queue" {
+
+python -m src.create_review_queue `
+data/annotations/annotator_1.json `
+data/annotations/annotator_2.json `
+reports/review_queue.csv
+
+}
+
+Run-Step "Step 4 - Unit Tests" {
+
 python -m pytest -q
 
+}
+
 Write-Host ""
+Write-Host "==============================================="
 Write-Host "Pipeline completed successfully."
+Write-Host "==============================================="
