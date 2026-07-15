@@ -60,6 +60,18 @@ if __name__ == "__main__":
 ) as f:
     json.dump(result, f, indent=4)
 
+from pathlib import Path
+
+Path("reports").mkdir(exist_ok=True)
+
+with open(
+    "reports/agreement_summary.json",
+    "w",
+    encoding="utf-8"
+) as f:
+
+    json.dump(result, f, indent=4)
+
 print(result)
 
 print("Agreement summary saved to reports/agreement_summary.json")
