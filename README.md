@@ -113,13 +113,43 @@ requirements.txt
 ---
 ## Dataset
 
-The benchmark includes a small industrial equipment image dataset located in:
+This repository intentionally **does not include industrial equipment images**.
+
+Users should provide their own images inside:
 
 ```
 data/images/
 ```
 
-Image sources and licensing information are available in:
+Supported formats:
+
+- JPG
+- JPEG
+- PNG
+
+Example equipment:
+
+- Air Compressor
+- Pump
+- Valve
+- Motor
+- Bearing
+- Gearbox
+- Pipeline
+- Heat Exchanger
+- Electrical Panel
+
+The benchmark uses `data/images.csv` to map metadata to each image.
+
+Example:
+
+```
+IMG001_air_compressor.jpg
+IMG002_pump.jpg
+IMG003_valve.jpg
+```
+
+Image documentation:
 
 - `data/images/README.md`
 - `data/images/LICENSE_IMAGES.md`
