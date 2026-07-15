@@ -1,80 +1,81 @@
-# Industrial-Equipment-Image-Annotation-QA-Benchmark
+# Industrial Equipment Image Annotation QA Benchmark
 
-Project Overview
+A lightweight benchmark demonstrating a complete Image Annotation Quality Assurance workflow for industrial equipment datasets.
 
-Business Problem
+This repository simulates a production annotation review pipeline used by AI data companies.
 
-Architecture
+---
 
-Repository Structure
+## Project Objectives
 
-Validation Workflow
+This benchmark demonstrates:
 
-Quality Metrics
+- Image metadata validation
+- Annotation schema validation
+- Bounding-box quality checks
+- Duplicate annotation detection
+- Annotation agreement analysis
+- IoU (Intersection over Union) scoring
+- Review queue generation
+- Quality reporting
 
-Industrial Labels
+The project is intentionally lightweight while showcasing practical annotation QA skills.
 
-Pipeline
+---
 
-Screenshots
+# Repository Structure
 
-Testing
+Industrial-Equipment-Image-Annotation-QA-Benchmark/
+requirements.txt
+data/
+images.csv
+annotator_1.jsonl
+annotator_2.jsonl
+data/images/
+LICENSE_IMAGES.md
+README.md
 
-Results
+reports/
 
-Future Work
+rubrics/
+annotation_rubric.json
 
-Tech Stack- Python 3.12, Pandas, Pydantic, Pytest, JSON, CSV, pathlib
+scripts/
+run_pipeline.ps1
 
-Pipeline execution
-Validate
+src/
+validate_annotations.py
+calculate_iou.py
+duplicate_detection.py
+agreement_analysis.py
+quality_scoring.py
+create_review_queue.py
+generate_report.py
+schemas.py
+config.py
 
-↓
+tests/
 
-IoU
 
-↓
 
-Agreement
+---
 
-↓
+## Technologies
 
-Review Queue
+- Python 3.12
+- Pandas
+- NumPy
+- Pydantic
+- JSON
+- Pytest
 
-↓
+---
 
-Reports
+## Local Installation
 
-↓
+Create virtual environment
 
-Tests
+```powershell
+py -3.12 -m venv .venv
 
-Review Queue
-image_003
-
-Label disagreement
-
-Review Needed
-
-Reviewer Pending
-
-Quality Summary
-Images
-
-15
-
-Annotations
-
-80
-
-Agreement
-
-91%
-
-IoU
-
-88%
-
-Duplicates
-
-2
+.venv\Scripts\activate
