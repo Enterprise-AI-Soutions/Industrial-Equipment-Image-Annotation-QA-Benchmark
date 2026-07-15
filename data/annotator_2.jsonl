@@ -4,6 +4,6 @@
 {"image_id":"IMG004","label":"electric_motor","bbox":[148,120,298,312],"annotator":"ANN002"}
 {"image_id":"IMG005","label":"bearing","bbox":[120,122,252,252],"annotator":"ANN002"}
 {"image_id":"IMG006","label":"gearbox","bbox":[110,98,312,262],"annotator":"ANN002"}
-{"image_id":"IMG007","label":"turbine","bbox":[92,92,448,348],"annotator":"ANN002"}
-{"image_id":"IMG008","label":"generator","bbox":[138,142,422,318],"annotator":"ANN002"}
-{"image_id":"IMG009","label":"conveyor","bbox":[82,148,598,182],"annotator":"ANN002"}
+{"image_id":"IMG007","label":"pipeline","bbox":[92,92,448,348],"annotator":"ANN002"}
+{"image_id":"IMG008","label":"heat_exchanger","bbox":[138,142,422,318],"annotator":"ANN002"}
+{"image_id":"IMG009","label":"electrical_panel","bbox":[82,148,598,182],"annotator":"ANN002"}
