@@ -52,12 +52,9 @@ if __name__ == "__main__":
 
     Path("reports").mkdir(exist_ok=True)
 
-    with open(
-        "reports/validation_report.json",
-        "w",
-        encoding="utf-8"
-    ) as f:
-
+    with open("reports/validation_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=4)
 
+    print("Report written.")
+    print(Path("reports/validation_report.json").resolve())
     print(f"Validated {len(data)} annotations.")
