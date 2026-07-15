@@ -162,7 +162,31 @@ Create virtual environment
 ```powershell
 py -3.12 -m venv .venv
 
-.venv\Scripts\activate
+.\.venv\Scripts\Activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
+python -c "import pandas,numpy,pydantic,pytest; print('Environment OK')"
+
+python -m src.validate_annotations `
+data/annotations/annotator_1.json
+
+python -m src.agreement_analysis `
+data/annotations/annotator_1.json `
+data/annotations/annotator_2.json
+
+python -m src.create_review_queue `
+data/annotations/annotator_1.json `
+data/annotations/annotator_2.json `
+reports/review_queue.csv
+
+python -m src.generate_report
+
+python -m pytest -q
+
+.\scripts\run_pipeline.ps1
+
+
 
 ```
 
