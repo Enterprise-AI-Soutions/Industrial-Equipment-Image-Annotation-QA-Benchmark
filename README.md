@@ -81,8 +81,6 @@ generate_report.py
 
 schemas.py
 
-_init_.py
-
 tests/
 
 test_iou.py
@@ -90,8 +88,6 @@ test_iou.py
 test_scoring.py
 
 test_validation.py
-
-_init_.py
 
 .gitignore
 
