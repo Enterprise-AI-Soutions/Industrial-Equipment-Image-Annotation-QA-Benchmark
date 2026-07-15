@@ -1,4 +1,4 @@
-image_id,file_name,equipment_type,width,height
+image_id,file_name,label,width,height
 IMG001,air_compressor.jpg,air_compressor,1280,720
 IMG002,pump.jpg,pump,1024,768
 IMG003,valve.jpg,valve,1200,800
