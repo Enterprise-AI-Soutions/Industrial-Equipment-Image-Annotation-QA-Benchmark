@@ -35,28 +35,29 @@ def validate_annotations(file_path: str):
 if __name__ == "__main__":
 
     import argparse
+    import json
+    from pathlib import Path
 
     parser = argparse.ArgumentParser()
-
     parser.add_argument("file")
-
     args = parser.parse_args()
 
     data = validate_annotations(args.file)
 
     report = {
-    "images_reviewed": len(validated),
-    "annotations": len(validated),
-    "status": "PASSED"
-}
+        "images_reviewed": len(data),
+        "annotations": len(data),
+        "status": "PASSED"
+    }
 
-with open(
-    "reports/validation_report.json",
-    "w",
-    encoding="utf-8"
-) as f:
-    json.dump(report, f, indent=4)
+    Path("reports").mkdir(exist_ok=True)
 
-print(f"Validated {len(validated)} annotations.")
+    with open(
+        "reports/validation_report.json",
+        "w",
+        encoding="utf-8"
+    ) as f:
 
-print("Validation report saved to reports/validation_report.json")
+        json.dump(report, f, indent=4)
+
+    print(f"Validated {len(data)} annotations.")
