@@ -2,53 +2,76 @@
 Generate Markdown benchmark report.
 """
 
+import json
 from pathlib import Path
 import pandas as pd
 
 
-def generate_report(
-    scoring_csv,
-    agreement,
-    review_queue,
-    output,
-):
+def generate_report():
 
-    score_df = pd.read_csv(scoring_csv)
+    validation = json.load(
+        open(
+            "reports/validation_report.json",
+            encoding="utf-8",
+        )
+    )
 
-    review_df = pd.read_csv(review_queue)
+    agreement = json.load(
+        open(
+            "reports/agreement_summary.json",
+            encoding="utf-8",
+        )
+    )
 
-    report = f"""
-# Industrial Equipment Image Annotation QA Benchmark
+    review = pd.read_csv(
+        "reports/review_queue.csv"
+    )
 
-## Summary
+    report = f"""# Industrial Equipment Image Annotation QA Benchmark
 
-Total annotations : {len(score_df)}
+## Validation
 
-Average IoU : {score_df['iou'].mean():.3f}
+Images Reviewed : {validation["images_reviewed"]}
 
-Average Quality Score : {score_df['quality_score'].mean():.3f}
+Annotations : {validation["annotations"]}
 
-Passed : {(score_df['status']=='PASS').sum()}
+Status : {validation["status"]}
 
-Failed : {(score_df['status']=='FAIL').sum()}
+---
 
-Reviewer Agreement : {agreement['agreement']:.2%}
+## Reviewer Agreement
 
-Manual Review Queue : {len(review_df)}
+Agreement : {agreement["agreement"]:.2%}
+
+Matching Labels : {agreement["matching_labels"]}
+
+---
+
+## Review Queue
+
+Cases requiring review : {len(review)}
+
+---
 
 Generated automatically.
 """
 
-    Path(output).write_text(
+    Path(
+        "reports/annotation_report.md"
+    ).write_text(
         report,
         encoding="utf-8",
     )
 
+    print()
+
+    print("Report generated successfully.")
+
+    print("Output:")
+
+    print("reports/annotation_report.md")
+
 
 if __name__ == "__main__":
-    generate_report(
-        validation_file="reports/validation_report.json",
-        agreement_file="reports/agreement_summary.json",
-        review_file="reports/review_queue.csv",
-        output_file="reports/annotation_report.md"
-    )
+
+    generate_report()
