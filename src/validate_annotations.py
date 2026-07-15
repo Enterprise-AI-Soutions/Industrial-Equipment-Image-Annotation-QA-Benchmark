@@ -44,4 +44,19 @@ if __name__ == "__main__":
 
     data = validate_annotations(args.file)
 
-    print(f"Validated {len(data)} annotations.")
+    report = {
+    "images_reviewed": len(validated),
+    "annotations": len(validated),
+    "status": "PASSED"
+}
+
+with open(
+    "reports/validation_report.json",
+    "w",
+    encoding="utf-8"
+) as f:
+    json.dump(report, f, indent=4)
+
+print(f"Validated {len(validated)} annotations.")
+
+print("Validation report saved to reports/validation_report.json")
