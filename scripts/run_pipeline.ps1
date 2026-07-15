@@ -58,4 +58,17 @@ reports/review_queue.csv
 
 Run-Step "Step 4 - Generate Report" {
 
-Run-Step "Step 4 - Generate Report" {
+python -m src.generate_report
+
+}
+
+Run-Step "Step 5 - Unit Tests" {
+
+python -m pytest -q
+
+}
+
+Write-Host ""
+Write-Host "==============================================="
+Write-Host "Pipeline completed successfully."
+Write-Host "==============================================="
