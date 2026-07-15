@@ -1,1 +1,5 @@
-
+{
+    "total_annotations": 9,
+    "matching_labels": 8,
+    "agreement": 0.889
+}
