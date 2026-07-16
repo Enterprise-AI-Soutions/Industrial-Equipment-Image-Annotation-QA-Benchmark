@@ -1,65 +1,58 @@
-[
+{
+  "annotations": [
     {
-        "image_id":"IMG001",
-        "annotation_id":"ANN101",
-        "label":"air_compressor",
-        "confidence":0.96,
-        "bbox":{"x":152,"y":90,"width":520,"height":398}
+      "id": 1,
+      "image": "pump_001.jpg",
+      "label": "Pump",
+      "bbox": [118, 86, 219, 164]
     },
     {
-        "image_id":"IMG002",
-        "annotation_id":"ANN102",
-        "label":"pump",
-        "confidence":0.90,
-        "bbox":{"x":118,"y":110,"width":450,"height":360}
+      "id": 2,
+      "image": "valve_001.jpg",
+      "label": "Valve",
+      "bbox": [319, 106, 93, 88]
     },
     {
-        "image_id":"IMG003",
-        "annotation_id":"ANN103",
-        "label":"gate_valve",
-        "confidence":0.82,
-        "bbox":{"x":158,"y":150,"width":250,"height":248}
+      "id": 3,
+      "image": "motor_001.jpg",
+      "label": "Electric Motor",
+      "bbox": [61, 139, 186, 171]
     },
     {
-        "image_id":"IMG004",
-        "annotation_id":"ANN104",
-        "label":"motor",
-        "confidence":0.60,
-        "bbox":{"x":210,"y":180,"width":470,"height":360}
+      "id": 4,
+      "image": "bearing_001.jpg",
+      "label": "Bearing",
+      "bbox": [181, 159, 79, 81]
     },
     {
-        "image_id":"IMG005",
-        "annotation_id":"ANN105",
-        "label":"bearing",
-        "confidence":0.91,
-        "bbox":{"x":222,"y":180,"width":180,"height":180}
+      "id": 5,
+      "image": "pipeline_001.jpg",
+      "label": "Pipeline",
+      "bbox": [41, 211, 431, 56]
     },
     {
-        "image_id":"IMG006",
-        "annotation_id":"ANN106",
-        "label":"gearbox",
-        "confidence":0.94,
-        "bbox":{"x":170,"y":142,"width":328,"height":282}
+      "id": 6,
+      "image": "gearbox_001.jpg",
+      "label": "Gearbox",
+      "bbox": [146, 111, 170, 129]
     },
     {
-        "image_id":"IMG007",
-        "annotation_id":"ANN107",
-        "label":"generator",
-        "confidence":0.92,
-        "bbox":{"x":118,"y":122,"width":518,"height":388}
+      "id": 7,
+      "image": "air_compressor_001.jpg",
+      "label": "Compressor",
+      "bbox": [92, 92, 239, 178]
     },
     {
-        "image_id":"IMG008",
-        "annotation_id":"ANN108",
-        "label":"turbine",
-        "confidence":0.95,
-        "bbox":{"x":152,"y":150,"width":518,"height":360}
+      "id": 8,
+      "image": "heat_exchanger_001.jpg",
+      "label": "Heat Exchanger",
+      "bbox": [171, 94, 261, 169]
     },
     {
-        "image_id":"IMG009",
-        "annotation_id":"ANN109",
-        "label":"conveyor",
-        "confidence":0.93,
-        "bbox":{"x":102,"y":198,"width":818,"height":220}
+      "id": 9,
+      "image": "electrical_panel_001.jpg",
+      "label": "Electrical Panel",
+      "bbox": [124, 74, 186, 246]
     }
-]
+  ]
+}
