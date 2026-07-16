@@ -210,4 +210,4 @@ python -m pytest -q
 
 ## Validate Annotations
 
-![Validate Annotations](docs/images/Validate_Annotations)
+![Validate Annotations](docs/images/Validate_Annotations.png)
