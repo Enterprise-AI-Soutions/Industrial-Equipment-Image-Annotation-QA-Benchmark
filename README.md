@@ -194,20 +194,20 @@ python -m pytest -q
 
 ## Pipeline Execution
 
-![Successful_Pipeline_Execution](docs/images/Pipeline_Success.png)
+![Successful_Pipeline_Execution](docs/images/Pipeline_Success_vscode.png)
 
 ## Agreement Analysis
 
-![agreement_Analysis](docs/images/Agreement_Summary.png)
+![agreement_Analysis](docs/images/Agreement_Summary_vscode.png)
 
 ## Review Queue
 
-![Review_Queue](docs/images/Review_Queue.png)
+![Review_Queue](docs/images/Review_Queue_vscode.png)
 
 ## Report Generation
 
-![Report_Generation](docs/images/Report_Generation.png)
+![Report_Generation](docs/images/Report_Generation_vscode.png)
 
 ## Validate Annotations
 
-![Validate Annotations](docs/images/Validate_Annotations.png)
+![Validate Annotations](docs/images/Validate_Annotations_vscode.png)
