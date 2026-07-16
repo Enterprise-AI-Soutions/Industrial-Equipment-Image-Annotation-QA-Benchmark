@@ -253,3 +253,19 @@ build/
 
 # Generated reports (keep sample outputs if desired)
 reports/*.tmp
+
+# --------------------------------------------------
+# User supplied industrial equipment images
+# --------------------------------------------------
+
+data/images/*.jpg
+data/images/*.jpeg
+data/images/*.png
+data/images/*.bmp
+data/images/*.tif
+data/images/*.tiff
+data/images/*.webp
+
+# Keep documentation files
+!data/images/README.md
+!data/images/LICENSE_IMAGES.md
