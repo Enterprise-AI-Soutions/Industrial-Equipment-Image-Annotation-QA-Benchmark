@@ -215,7 +215,7 @@ Vscode - chmod +x scripts/run_pipeline.sh
          ./scripts/run_pipeline.sh
 ```
 
-```
+
 
 ## Output Screenshots
 
@@ -239,4 +239,3 @@ Vscode - chmod +x scripts/run_pipeline.sh
 
 ![Validate Annotations](docs/images/Validate_Annotations_vscode.png)
 
-```
