@@ -162,6 +162,9 @@ Image documentation:
 ```
 git clone https://github.com/Enterprise-AI-Soutions/Industrial-Equipment-Image-Annotation-QA-Benchmark.git
 
+```
+
+```
 cd Industrial-Equipment-Image-Annotation-QA-Benchmark.git
 
 ```
