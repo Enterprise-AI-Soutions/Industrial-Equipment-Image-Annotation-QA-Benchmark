@@ -157,17 +157,24 @@ Image documentation:
 
 ## Local Execution
 
+## Copy repository locally
+
+```
+git clone
+
+```
+
 Create virtual environment
 
-```powershell
-
+```
+powershell-
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate
 
 ```
 
-```Vscode
-
+```
+Vscode-
 python -m venv .venv
 Create virtual environment in vscode upon popup asking
 
@@ -195,10 +202,13 @@ python -m src.generate_report
 
 python -m pytest -q
 
+```
 powershell - .\scripts\run_pipeline.ps1
+```
+```
 Vscode - chmod +x scripts/run_pipeline.sh
          ./scripts/run_pipeline.sh
-
+```
 
 ```
 
