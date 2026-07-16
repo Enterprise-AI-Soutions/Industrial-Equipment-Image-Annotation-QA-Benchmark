@@ -238,3 +238,5 @@ Vscode - chmod +x scripts/run_pipeline.sh
 ## Validate Annotations
 
 ![Validate Annotations](docs/images/Validate_Annotations_vscode.png)
+
+```
