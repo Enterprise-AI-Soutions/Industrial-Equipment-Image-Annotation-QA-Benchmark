@@ -9,19 +9,17 @@ import pandas as pd
 
 def generate_report():
 
-    validation = json.load(
-        open(
-            "reports/validation_report.json",
-            encoding="utf-8",
-        )
-    )
+    with open(
+        "reports/validation_report.json",
+        encoding="utf-8",
+    ) as f:
+        validation = json.load(f)
 
-    agreement = json.load(
-        open(
-            "reports/agreement_summary.json",
-            encoding="utf-8",
-        )
-    )
+    with open(
+        "reports/agreement_summary.json",
+        encoding="utf-8",
+    ) as f:
+        agreement = json.load(f)
 
     review = pd.read_csv(
         "reports/review_queue.csv"
