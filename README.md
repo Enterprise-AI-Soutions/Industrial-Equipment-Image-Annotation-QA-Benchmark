@@ -171,50 +171,80 @@ cd Industrial-Equipment-Image-Annotation-QA-Benchmark.git
 
 Create virtual environment
 
+powershell
 ```
-powershell-
 py -3.12 -m venv .venv
+
+```
+```
 .\.venv\Scripts\Activate
 
 ```
+Vscode
 
 ```
-Vscode-
 python -m venv .venv
+
+```
+```
 Create virtual environment in vscode upon popup asking
 
 ```
-
+```
 python -m pip install --upgrade pip
+
+```
+```
 python -m pip install -r requirements.txt
 
+```
+```
 python -c "import pandas,numpy,pydantic,pytest; print('Environment OK')"
 
+```
+```
 python -m src.validate_annotations `
 data/annotations/annotator_1.json or python -m src.validate_annotations data/annotations/annotator_1.json
 
+```
+```
 python -m src.agreement_analysis `
 data/annotations/annotator_1.json `
 data/annotations/annotator_2.json or python -m src.agreement_analysis data/annotations/annotator_1.json data/annotations/annotator_2.json
 
-
+```
+```
 python -m src.create_review_queue `
 data/annotations/annotator_1.json `
 data/annotations/annotator_2.json `
 reports/review_queue.csv or python -m src.create_review_queue data/annotations/annotator_1.json data/annotations/annotator_2.json reports/review_queue.csv
 
+```
+
+```
 python -m src.generate_report
 
+```
+```
 python -m pytest -q
 
 ```
-powershell - .\scripts\run_pipeline.ps1
+powershell
+
 ```
+.\scripts\run_pipeline.ps1
+
 ```
-Vscode - chmod +x scripts/run_pipeline.sh
-         ./scripts/run_pipeline.sh
+Vscode
+```
+chmod +x scripts/run_pipeline.sh
+
 ```
 
+```
+./scripts/run_pipeline.sh
+
+```
 
 
 ## Output Screenshots
