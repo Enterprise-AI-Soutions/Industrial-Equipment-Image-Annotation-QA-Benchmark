@@ -194,10 +194,10 @@ python -m pytest -q
 
 docs/images/
 
-![Pipeline_Success]/docs/images/Pipeline_Success.png
+![Successful_Pipeline_Execution](docs/images/Pipeline_Success.png)
 
-![agreement_summary]/docs/images/Agreement_Summary.png
+![agreement_summary](docs/images/Agreement_Summary.png)
 
-![Review_Queue]/docs/images/Review_Queue.png
+![Review_Queue](docs/images/Review_Queue.png)
 
-![Report_Generation]/docs/images/Report_Generation.png
+![Report_Generation](docs/images/Report_Generation.png)
