@@ -192,12 +192,22 @@ python -m pytest -q
 
 ## Output Screenshots
 
-docs/images/
+## Pipeline Execution
 
 ![Successful_Pipeline_Execution](docs/images/Pipeline_Success.png)
 
-![agreement_summary](docs/images/Agreement_Summary.png)
+## Agreement Analysis
+
+![agreement_Analysis](docs/images/Agreement_Summary.png)
+
+## Review Queue
 
 ![Review_Queue](docs/images/Review_Queue.png)
 
+## Report Generation
+
 ![Report_Generation](docs/images/Report_Generation.png)
+
+## Validate Annotations
+
+![Validate Annotations](docs/images/Validate_Annotations)
