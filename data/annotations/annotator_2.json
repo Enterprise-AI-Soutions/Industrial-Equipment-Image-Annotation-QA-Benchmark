@@ -1,58 +1,83 @@
-{
-  "annotations": [
-    {
-      "id": 1,
-      "image": "pump_001.jpg",
-      "label": "Pump",
-      "bbox": [118, 86, 219, 164]
-    },
-    {
-      "id": 2,
-      "image": "valve_001.jpg",
-      "label": "Valve",
-      "bbox": [319, 106, 93, 88]
-    },
-    {
-      "id": 3,
-      "image": "motor_001.jpg",
-      "label": "Electric Motor",
-      "bbox": [61, 139, 186, 171]
-    },
-    {
-      "id": 4,
-      "image": "bearing_001.jpg",
-      "label": "Bearing",
-      "bbox": [181, 159, 79, 81]
-    },
-    {
-      "id": 5,
-      "image": "pipeline_001.jpg",
-      "label": "Pipeline",
-      "bbox": [41, 211, 431, 56]
-    },
-    {
-      "id": 6,
-      "image": "gearbox_001.jpg",
-      "label": "Gearbox",
-      "bbox": [146, 111, 170, 129]
-    },
-    {
-      "id": 7,
-      "image": "air_compressor_001.jpg",
-      "label": "Compressor",
-      "bbox": [92, 92, 239, 178]
-    },
-    {
-      "id": 8,
-      "image": "heat_exchanger_001.jpg",
-      "label": "Heat Exchanger",
-      "bbox": [171, 94, 261, 169]
-    },
-    {
-      "id": 9,
-      "image": "electrical_panel_001.jpg",
-      "label": "Electrical Panel",
-      "bbox": [124, 74, 186, 246]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "image_id": "IMG001",
+    "annotation_id": "ANN001",
+    "image": "pump.jpg",
+    "label": "pump",
+    "confidence": 0.91,
+    "bbox": [118, 86, 219, 164]
+  },
+  {
+    "id": 2,
+    "image_id": "IMG002",
+    "annotation_id": "ANN002",
+    "image": "valve.jpg",
+    "label": "valve",
+    "confidence": 0.87,
+    "bbox": [319, 106, 93, 88]
+  },
+  {
+    "id": 3,
+    "image_id": "IMG003",
+    "annotation_id": "ANN003",
+    "image": "motor.jpg",
+    "label": "motor",
+    "confidence": 0.96,
+    "bbox": [61, 139, 186, 171]
+  },
+  {
+    "id": 4,
+    "image_id": "IMG004",
+    "annotation_id": "ANN004",
+    "image": "bearing.jpg",
+    "label": "bearing",
+    "confidence": 0.88,
+    "bbox": [181, 159, 79, 81]
+  },
+  {
+    "id": 5,
+    "image_id": "IMG005",
+    "annotation_id": "ANN005",
+    "image": "pipeline.jpg",
+    "label": "pipeline",
+    "confidence": 0.92,
+    "bbox": [41, 211, 431, 56]
+  },
+  {
+    "id": 6,
+    "image_id": "IMG006",
+    "annotation_id": "ANN006",
+    "image": "gearbox.jpg",
+    "label": "gearbox",
+    "confidence": 0.94,
+    "bbox": [146, 111, 170, 129]
+  },
+  {
+    "id": 7,
+    "image_id": "IMG007",
+    "annotation_id": "ANN007",
+    "image": "air_compressor.jpg",
+    "label": "compressor",
+    "confidence": 0.88,
+    "bbox": [92, 92, 239, 178]
+  },
+  {
+    "id": 8,
+    "image_id": "IMG008",
+    "annotation_id": "ANN008",
+    "image": "heat_exchanger.jpg",
+    "label": "heat exchanger",
+    "confidence": 0.89,
+    "bbox": [171, 94, 261, 169]
+  },
+  {
+    "id": 9,
+    "image_id": "IMG009",
+    "annotation_id": "ANN009",
+    "image": "electrical_panel.jpg",
+    "label": "electrical panel",
+    "confidence": 0.93,
+    "bbox": [124, 74, 186, 246]
+  }
+]
