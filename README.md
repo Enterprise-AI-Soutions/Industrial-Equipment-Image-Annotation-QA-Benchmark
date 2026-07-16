@@ -160,7 +160,9 @@ Image documentation:
 ## Copy repository locally
 
 ```
-git clone
+git clone https://github.com/Enterprise-AI-Soutions/Industrial-Equipment-Image-Annotation-QA-Benchmark.git
+
+cd Industrial-Equipment-Image-Annotation-QA-Benchmark.git
 
 ```
 
