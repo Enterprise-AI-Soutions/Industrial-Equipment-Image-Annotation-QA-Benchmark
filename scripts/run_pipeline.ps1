@@ -5,13 +5,18 @@ $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location $ProjectRoot
 $env:PYTHONPATH = $ProjectRoot
 
-# Detect the correct Python executable (prefer venv > user venv > system)
+# Only use the project's own .venv — no fallbacks to system or user Python
 if (Test-Path "$ProjectRoot\.venv\Scripts\python.exe") {
     $Python = "$ProjectRoot\.venv\Scripts\python.exe"
-} elseif (Test-Path "C:\Users\$env:USERNAME\.venv\Scripts\python.exe") {
-    $Python = "C:\Users\$env:USERNAME\.venv\Scripts\python.exe"
 } else {
-    $Python = "python"
+    Write-Host ""
+    Write-Host "[ERROR] Project virtual environment not found." -ForegroundColor Red
+    Write-Host "Please run the following from the project directory:" -ForegroundColor Yellow
+    Write-Host "  py -3.12 -m venv .venv" -ForegroundColor Yellow
+    Write-Host "  .\.venv\Scripts\Activate" -ForegroundColor Yellow
+    Write-Host "  python -m pip install -r requirements.txt" -ForegroundColor Yellow
+    Write-Host ""
+    exit 1
 }
 
 Write-Host "Working directory : $ProjectRoot" -ForegroundColor Cyan
