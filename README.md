@@ -166,12 +166,11 @@ python -c "import pandas, numpy, pydantic, pytest, PIL, cv2; print('Environment 
 
 ### 4. Run the full pipeline
 
-**Recommended — works from any directory:**
 ```powershell
 powershell -ExecutionPolicy Bypass -File ".\run.ps1"
 ```
 
-**Or from the project root:**
+**Or directly:**
 ```powershell
 .\scripts\run_pipeline.ps1
 ```
