@@ -1,5 +1,12 @@
 $ErrorActionPreference = "Stop"
 
+# Always run from the project root directory (works from any location)
+$ProjectRoot = Split-Path -Parent $PSScriptRoot
+Set-Location $ProjectRoot
+$env:PYTHONPATH = $ProjectRoot
+Write-Host "Working directory : $ProjectRoot" -ForegroundColor Cyan
+Write-Host "PYTHONPATH set to : $ProjectRoot" -ForegroundColor Cyan
+
 function Run-Step {
 
     param(
