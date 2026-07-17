@@ -26,7 +26,12 @@ def validate_annotations(file_path: str, skip_image_check: bool = False):
 
     # Require images to exist in data/images/ (skipped in unit tests)
     if not skip_image_check:
-        if not IMAGE_DIR.exists() or not any(IMAGE_DIR.iterdir()):
+        IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
+        image_files = [
+            f for f in IMAGE_DIR.iterdir()
+            if f.is_file() and f.suffix.lower() in IMAGE_EXTS
+        ] if IMAGE_DIR.exists() else []
+        if not image_files:
             raise RuntimeError(
                 f"No images found in {IMAGE_DIR}. "
                 "Please upload your 9 industrial equipment images to data/images/ before running the pipeline."
@@ -89,9 +94,9 @@ if __name__ == "__main__":
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=4)
 
-    print(f"\n✔ Validated {len(data)} annotations.")
+    print(f"\n[OK] Validated {len(data)} annotations.")
     if issues:
-        print(f"⚠  {len(issues)} issue(s) found:")
+        print(f"[WARNING] {len(issues)} issue(s) found:")
         for iss in issues:
             print(f"   - {iss}")
     print(f"\nReport written to: {report_path.resolve()}")

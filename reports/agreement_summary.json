@@ -1,5 +1,53 @@
 {
     "total_annotations": 9,
-    "matching_labels": 8,
-    "agreement": 0.889
+    "matching_labels": 9,
+    "agreement": 1.0,
+    "mean_iou": 0.973,
+    "per_label": {
+        "pump": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.972
+        },
+        "valve": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.967
+        },
+        "motor": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.978
+        },
+        "bearing": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.975
+        },
+        "pipeline": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.941
+        },
+        "gearbox": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.981
+        },
+        "compressor": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.977
+        },
+        "heat exchanger": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.971
+        },
+        "electrical panel": {
+            "count": 1,
+            "label_agreement": 1.0,
+            "mean_iou": 0.991
+        }
+    }
 }

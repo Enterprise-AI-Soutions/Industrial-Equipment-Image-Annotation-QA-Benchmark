@@ -1,2 +1,1 @@
-image_id,annotation_id,review_reason
-IMG003,ANN003,Label disagreement
+image_id,annotation_id,annotator_1_label,annotator_2_label,iou,annotator_1_confidence,annotator_2_confidence,review_reason

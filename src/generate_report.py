@@ -122,7 +122,7 @@ Generated: {timestamp}
 
 ---
 
-## ✅ Validation Results
+## Validation Results
 
 | Metric              | Value         |
 |---------------------|---------------|
@@ -133,7 +133,7 @@ Generated: {timestamp}
 
 ---
 
-## 🤝 Reviewer Agreement
+## Reviewer Agreement
 
 | Metric              | Value         |
 |---------------------|---------------|
@@ -148,23 +148,23 @@ Generated: {timestamp}
 {per_label_rows}
 ---
 
-## 🔍 Duplicate Detection
+## Duplicate Detection
 
-Near-duplicate bounding boxes detected (IoU ≥ threshold): **{dup_count}**
+Near-duplicate bounding boxes detected (IoU >= threshold): **{dup_count}**
 
 ---
 
-## 📋 Review Queue
+## Review Queue
 
 Annotations flagged for manual review: **{review_count}**
 
 {review_reasons}
 ---
 
-## 📊 Outputs
+## Output Files
 
-| File                      | Description                              |
-|---------------------------|------------------------------------------|
+| File                            | Description                        |
+|---------------------------------|------------------------------------|
 | reports/validation_report.json  | Schema + class validation results  |
 | reports/agreement_summary.json  | Inter-annotator agreement scores   |
 | reports/review_queue.csv        | Annotations flagged for review     |
@@ -179,7 +179,7 @@ Annotations flagged for manual review: **{review_count}**
     out_path = REPORT_DIR / "annotation_report.md"
     out_path.write_text(report, encoding="utf-8")
 
-    print("\n✔ Report generated successfully.")
+    print("\n[OK] Report generated successfully.")
     print(f"  Output: {out_path.resolve()}")
     print(f"  Annotation summary: {(REPORT_DIR / 'annotation_summary.csv').resolve()}")
 

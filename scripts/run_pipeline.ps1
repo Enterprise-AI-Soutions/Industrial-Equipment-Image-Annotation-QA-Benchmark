@@ -4,7 +4,18 @@ $ErrorActionPreference = "Stop"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location $ProjectRoot
 $env:PYTHONPATH = $ProjectRoot
+
+# Detect the correct Python executable (prefer venv > user venv > system)
+if (Test-Path "$ProjectRoot\.venv\Scripts\python.exe") {
+    $Python = "$ProjectRoot\.venv\Scripts\python.exe"
+} elseif (Test-Path "C:\Users\$env:USERNAME\.venv\Scripts\python.exe") {
+    $Python = "C:\Users\$env:USERNAME\.venv\Scripts\python.exe"
+} else {
+    $Python = "python"
+}
+
 Write-Host "Working directory : $ProjectRoot" -ForegroundColor Cyan
+Write-Host "Python executable : $Python" -ForegroundColor Cyan
 Write-Host "PYTHONPATH set to : $ProjectRoot" -ForegroundColor Cyan
 
 function Run-Step {
@@ -44,7 +55,11 @@ Write-Host ""
 # ---------------------------------------------------------
 # Pre-flight check: Ensure images exist in data/images/
 # ---------------------------------------------------------
-$imageFiles = Get-ChildItem -Path "data/images" -Include "*.jpg","*.jpeg","*.png" -ErrorAction SilentlyContinue
+$imageFiles = @(
+    Get-ChildItem -Path "data\images\*.jpg"  -ErrorAction SilentlyContinue
+    Get-ChildItem -Path "data\images\*.jpeg" -ErrorAction SilentlyContinue
+    Get-ChildItem -Path "data\images\*.png"  -ErrorAction SilentlyContinue
+)
 
 if ($imageFiles.Count -eq 0) {
     Write-Host ""
@@ -54,7 +69,7 @@ if ($imageFiles.Count -eq 0) {
     exit 1
 }
 
-Write-Host "  Found $($imageFiles.Count) image(s) in data/images/  ✔" -ForegroundColor Green
+Write-Host "  Found $($imageFiles.Count) image(s) in data/images/ [OK]" -ForegroundColor Green
 Write-Host ""
 
 # ---------------------------------------------------------
@@ -62,7 +77,7 @@ Write-Host ""
 # ---------------------------------------------------------
 Run-Step "Step 1 - Validate Annotation File" {
 
-    python -m src.validate_annotations `
+    & $Python -m src.validate_annotations `
     data/annotations/annotator_1.json
 
 }
@@ -72,7 +87,7 @@ Run-Step "Step 1 - Validate Annotation File" {
 # ---------------------------------------------------------
 Run-Step "Step 2 - Duplicate Bounding Box Detection" {
 
-    python -c "
+    & $Python -c "
 import json
 from src.validate_annotations import validate_annotations
 from src.duplicate_detection import find_duplicate_boxes, write_duplicate_report
@@ -91,7 +106,7 @@ print(f'  Written to: {out}')
 # ---------------------------------------------------------
 Run-Step "Step 3 - Reviewer Agreement" {
 
-    python -m src.agreement_analysis `
+    & $Python -m src.agreement_analysis `
     data/annotations/annotator_1.json `
     data/annotations/annotator_2.json
 
@@ -102,7 +117,7 @@ Run-Step "Step 3 - Reviewer Agreement" {
 # ---------------------------------------------------------
 Run-Step "Step 4 - Review Queue" {
 
-    python -m src.create_review_queue `
+    & $Python -m src.create_review_queue `
     data/annotations/annotator_1.json `
     data/annotations/annotator_2.json `
     reports/review_queue.csv
@@ -114,7 +129,7 @@ Run-Step "Step 4 - Review Queue" {
 # ---------------------------------------------------------
 Run-Step "Step 5 - Generate Report" {
 
-    python -m src.generate_report
+    & $Python -m src.generate_report
 
 }
 
@@ -123,7 +138,7 @@ Run-Step "Step 5 - Generate Report" {
 # ---------------------------------------------------------
 Run-Step "Step 6 - Unit Tests" {
 
-    python -m pytest -v
+    & $Python -m pytest "$ProjectRoot\tests" -v
 
 }
 

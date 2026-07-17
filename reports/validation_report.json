@@ -1,5 +1,7 @@
 {
     "images_reviewed": 9,
     "annotations": 9,
+    "issues_count": 0,
+    "issues": [],
     "status": "PASSED"
 }

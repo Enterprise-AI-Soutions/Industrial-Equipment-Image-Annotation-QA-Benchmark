@@ -106,5 +106,5 @@ if __name__ == "__main__":
 
     total = create_review_queue(args.evaluator1, args.evaluator2, args.output)
 
-    print(f"\n✔ Review queue written to: {args.output}")
+    print(f"\n[OK] Review queue written to: {args.output}")
     print(f"  {total} annotation(s) flagged for review.")

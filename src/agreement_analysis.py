@@ -98,7 +98,7 @@ if __name__ == "__main__":
     with open(output, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=4)
 
-    print(f"\n✔ Agreement summary written to: {output}")
+    print(f"\n[OK] Agreement summary written to: {output}")
     print(f"  Label agreement : {result['agreement']:.1%}")
     print(f"  Mean IoU        : {result['mean_iou']:.3f}")
     print(f"  Matching labels : {result['matching_labels']} / {result['total_annotations']}")

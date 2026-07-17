@@ -1,0 +1,10 @@
+image_id,annotation_id,annotator_1_label,annotator_2_label,annotator_1_confidence,annotator_2_confidence
+IMG001,ANN001,pump,pump,0.92,0.91
+IMG002,ANN002,valve,valve,0.88,0.87
+IMG003,ANN003,motor,motor,0.95,0.96
+IMG004,ANN004,bearing,bearing,0.87,0.88
+IMG005,ANN005,pipeline,pipeline,0.91,0.92
+IMG006,ANN006,gearbox,gearbox,0.93,0.94
+IMG007,ANN007,compressor,compressor,0.89,0.88
+IMG008,ANN008,heat exchanger,heat exchanger,0.9,0.89
+IMG009,ANN009,electrical panel,electrical panel,0.94,0.93
