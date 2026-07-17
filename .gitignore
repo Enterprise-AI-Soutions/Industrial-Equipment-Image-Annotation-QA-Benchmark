@@ -254,18 +254,6 @@ build/
 # Generated reports (keep sample outputs if desired)
 reports/*.tmp
 
-# --------------------------------------------------
-# User supplied industrial equipment images
-# --------------------------------------------------
-
-data/images/*.jpg
-data/images/*.jpeg
-data/images/*.png
-data/images/*.bmp
-data/images/*.tif
-data/images/*.tiff
-data/images/*.webp
-
-# Keep documentation files
-!data/images/README.md
-!data/images/LICENSE_IMAGES.md
+# Images in data/images/ are NOT ignored.
+# You must upload your 9 industrial equipment images into data/images/
+# before the pipeline will run. See README.md for details.

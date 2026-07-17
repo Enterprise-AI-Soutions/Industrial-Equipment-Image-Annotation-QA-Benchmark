@@ -2,8 +2,9 @@
 Pydantic schemas used for validation with image support.
 """
 
-from pydantic import BaseModel, Field, field_validator
-from typing import Optional
+from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import ConfigDict
+from typing import Optional, Union
 
 
 class BoundingBox(BaseModel):
@@ -48,13 +49,27 @@ class BoundingBox(BaseModel):
 class Annotation(BaseModel):
     """
     Single annotation record with image reference and bounding box.
+    Accepts both array [x,y,w,h] and dict {x,y,width,height} bbox formats.
+    Extra JSON fields (id, image, etc.) are silently ignored.
     """
+    model_config = ConfigDict(extra="ignore")
+
     image_id: str = Field(description="Unique image identifier")
     annotation_id: str = Field(description="Unique annotation identifier")
     label: str = Field(description="Equipment label/class")
     confidence: float = Field(ge=0.0, le=1.0, description="Confidence score 0-1")
     bbox: BoundingBox = Field(description="Bounding box coordinates")
     image_filename: Optional[str] = Field(None, description="Optional image filename reference")
+
+    @field_validator("bbox", mode="before")
+    @classmethod
+    def parse_bbox(cls, value):
+        """Accept bbox as array [x, y, w, h] or dict {x, y, width, height}."""
+        if isinstance(value, (list, tuple)):
+            if len(value) != 4:
+                raise ValueError("BBox array must have exactly 4 elements: [x, y, width, height]")
+            return {"x": value[0], "y": value[1], "width": value[2], "height": value[3]}
+        return value
 
     @field_validator("label")
     @classmethod

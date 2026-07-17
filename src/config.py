@@ -40,7 +40,12 @@ VALID_CLASSES = {
     "gearbox",
     "generator",
     "turbine",
-    "conveyor"
+    "conveyor",
+    "pipeline",
+    "heat exchanger",
+    "heat_exchanger",
+    "electrical panel",
+    "electrical_panel",
 
 }
 
