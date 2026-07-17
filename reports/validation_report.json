@@ -1,7 +1,10 @@
 {
     "images_reviewed": 9,
     "annotations": 9,
+    "schema_errors": 0,
+    "image_validation_issues": 0,
     "issues_count": 0,
-    "issues": [],
-    "status": "PASSED"
+    "status": "PASSED",
+    "image_validation_details": [],
+    "schema_issues": []
 }

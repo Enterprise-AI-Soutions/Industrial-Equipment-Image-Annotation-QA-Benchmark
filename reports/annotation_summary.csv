@@ -1,10 +1,10 @@
-image_id,annotation_id,annotator_1_label,annotator_2_label,annotator_1_confidence,annotator_2_confidence
-IMG001,ANN001,pump,pump,0.92,0.91
-IMG002,ANN002,valve,valve,0.88,0.87
-IMG003,ANN003,motor,motor,0.95,0.96
-IMG004,ANN004,bearing,bearing,0.87,0.88
-IMG005,ANN005,pipeline,pipeline,0.91,0.92
-IMG006,ANN006,gearbox,gearbox,0.93,0.94
-IMG007,ANN007,compressor,compressor,0.89,0.88
-IMG008,ANN008,heat exchanger,heat exchanger,0.9,0.89
-IMG009,ANN009,electrical panel,electrical panel,0.94,0.93
+image_id,annotation_id,referenced_filename,resolved_filename,real_width_px,real_height_px,annotator_1_label,annotator_2_label,annotator_1_conf,annotator_2_conf,bbox,bbox_within_bounds
+IMG001,ANN001,pump.jpg,pump_001.png,2500,2500,pump,pump,0.92,0.91,"[120, 85, 220, 165]",OK
+IMG002,ANN002,valve.jpg,valve_001.jpg,740,493,valve,valve,0.88,0.87,"[320, 105, 92, 88]",OK
+IMG003,ANN003,motor.jpg,motor_001.jpg,612,459,motor,motor,0.95,0.96,"[60, 140, 185, 170]",OK
+IMG004,ANN004,bearing.jpg,bearing_001.jpg,612,407,bearing,bearing,0.87,0.88,"[180, 160, 80, 80]",OK
+IMG005,ANN005,pipeline.jpg,pipeline_001.jpg,2940,1960,pipeline,pipeline,0.91,0.92,"[40, 210, 430, 55]",OK
+IMG006,ANN006,gearbox.jpg,gearbox_001.jpg,740,740,gearbox,gearbox,0.93,0.94,"[145, 110, 170, 130]",OK
+IMG007,ANN007,air_compressor.jpg,air_compressor_001.png,664,650,compressor,compressor,0.89,0.88,"[90, 90, 240, 180]",OK
+IMG008,ANN008,heat_exchanger.jpg,heat_exchanger_001.jpg,523,360,heat exchanger,heat exchanger,0.9,0.89,"[170, 95, 260, 170]",OK
+IMG009,ANN009,electrical_panel.jpg,electrical_panel_001.jpg,1749,980,electrical panel,electrical panel,0.94,0.93,"[125, 75, 185, 245]",OK
