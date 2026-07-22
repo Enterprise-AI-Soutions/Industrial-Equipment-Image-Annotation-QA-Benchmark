@@ -144,14 +144,13 @@ Copy your images into `data/images/` before proceeding.
 ### 3. Create virtual environment & install dependencies
 
 ```powershell
-# PowerShell
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
+# Install Vscode dependencies Python libraries OpenCV-OpenGL system graphics libraries
 ```
-Install Vscode dependencies Python libraries OpenCV-OpenGL system graphics libraries
 sudo apt-get install -y libgl1
 ```
 ```bash
