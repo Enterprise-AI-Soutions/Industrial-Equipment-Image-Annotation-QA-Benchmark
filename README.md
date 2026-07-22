@@ -43,7 +43,7 @@ Industrial-Equipment-Image-Annotation-QA-Benchmark/
 │   └── annotation_rubric.json
 ├── scripts/
 │   ├── run_pipeline.ps1            ← Main pipeline (auto-detects Python venv)
-│   └── run_pipeline.sh
+│   └── run_pipeline.sh             ← VSCode Execution
 ├── src/
 │   ├── validate_annotations.py     ← 4-stage validation: schema, class, image, bbox bounds
 │   ├── image_validator.py          ← Fuzzy image resolver + real dimension loader (Pillow)
