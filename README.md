@@ -150,9 +150,12 @@ py -3.12 -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
-
+```
+Install Vscode dependencies Python libraries OpenCV-OpenGL system graphics libraries
+sudo apt-get install -y libgl1
+```
 ```bash
-# bash / macOS / Linux
+# bash / macOS / Linux / VScode
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
@@ -169,16 +172,15 @@ python -c "import pandas, numpy, pydantic, pytest, PIL, cv2; print('Environment 
 ```powershell
 powershell -ExecutionPolicy Bypass -File ".\run.ps1"
 ```
-
-**Or directly:**
-```powershell
+```
+**Or directly:** powershell
 .\scripts\run_pipeline.ps1
 ```
-
-The pipeline auto-detects your Python:
-- Project `.venv` (preferred)
-- `C:\Users\<username>\.venv` (fallback)
-- System Python (last resort)
+```
+VScode
+chmod +x scripts/run_pipeline.sh
+./scripts/run_pipeline.sh
+```
 
 ---
 
@@ -198,19 +200,17 @@ The pipeline auto-detects your Python:
 ## Running Individual Steps
 
 ```powershell
-# Set PYTHONPATH to project root first
-$env:PYTHONPATH = "E:\.gemini\Industrial-Equipment-Annotation"
 
-# Step 1 — Validate annotations (image-aware)
+# Validate annotations (image-aware)
 python -m src.validate_annotations data/annotations/annotator_1.json
 
-# Step 3 — Reviewer agreement
+# Reviewer agreement
 python -m src.agreement_analysis data/annotations/annotator_1.json data/annotations/annotator_2.json
 
-# Step 4 — Review queue
+# Review queue
 python -m src.create_review_queue data/annotations/annotator_1.json data/annotations/annotator_2.json reports/review_queue.csv
 
-# Step 5 — Generate report
+# Generate report
 python -m src.generate_report
 
 # Run tests only
@@ -255,9 +255,7 @@ The following labels are recognised by the class validator (`src/config.py`):
 
 ```
 pump, valve, motor, bearing, pipeline, gearbox,
-compressor, air compressor, air_compressor,
-heat exchanger, heat_exchanger,
-electrical panel, electrical_panel
+air_compressor, heat_exchanger, electrical_panel
 ```
 
 Labels not in this list are reported as warnings in `validation_report.json`.
@@ -285,3 +283,7 @@ Labels not in this list are reported as warnings in `validation_report.json`.
 ### Validate Annotations
 
 ![Validate Annotations](docs/images/Validate_Annotations_vscode.png)
+
+### Tests
+
+![Tests](docs/images/Tests_vscode.png)
