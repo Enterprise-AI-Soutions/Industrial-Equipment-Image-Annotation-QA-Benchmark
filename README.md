@@ -139,7 +139,7 @@ cd Industrial-Equipment-Image-Annotation-QA-Benchmark
 
 ### 2. Upload your 9 equipment images
 
-Copy your images into `data/images/` before proceeding.
+Copy/upload your images into `data/images/` before proceeding.
 
 ### 3. Create virtual environment & install dependencies
 
