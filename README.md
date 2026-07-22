@@ -172,12 +172,12 @@ python -c "import pandas, numpy, pydantic, pytest, PIL, cv2; print('Environment 
 ```powershell
 powershell -ExecutionPolicy Bypass -File ".\run.ps1"
 ```
-```
 **Or directly:** powershell
+```
 .\scripts\run_pipeline.ps1
 ```
-```
 VScode
+```
 chmod +x scripts/run_pipeline.sh
 ./scripts/run_pipeline.sh
 ```
